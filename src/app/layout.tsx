@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -22,12 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interTight.className} antialiased flex flex-col h-screen overflow-hidden`}
+        className={`${interTight.className} antialiased h-screen overflow-hidden`}
       >
-        <div className="flex-grow overflow-hidden">
-          {children}
-        </div>
-        <Footer />
+        {children}
       </body>
     </html>
   );

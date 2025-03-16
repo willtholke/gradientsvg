@@ -3,7 +3,7 @@ import { Github } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full py-3">
+    <footer className="w-full py-3 flex-shrink-0">
       <div className="max-w-[1460px] mx-auto px-6 flex justify-between items-center border-t pt-3">
         <div className="text-sm text-gray-500">
           © Made in California.
