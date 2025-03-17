@@ -36,55 +36,27 @@ function GradientGallerySection({ items }: GalleryProps) {
           dragElastic={0.05}
           dragTransition={{ power: 0.2, timeConstant: 400 }}
         >
-          {/* First set of items */}
-          <div className="flex gap-4">
-            {items.map((item) => (
-              <div 
-                key={item.id} 
-                className="relative overflow-hidden rounded-lg w-[300px] flex-shrink-0"
-              >
-                <div
-                  className="aspect-video w-full"
-                  style={{ background: item.gradient }}
-                />
-                <div className="absolute bottom-3 right-3">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="bg-white/80 hover:bg-white hover:scale-105 transition-transform hover:cursor-grab"
-                    onClick={() => window.location.href = `/create?gradient=${encodeURIComponent(item.gradient)}`}
-                  >
-                    Use this <ArrowRight className="ml-1 h-4 w-4 cursor-pointer" />
-                  </Button>
-                </div>
+          {items.map((item) => (
+            <div 
+              key={item.id} 
+              className="relative overflow-hidden rounded-lg w-[300px] flex-shrink-0"
+            >
+              <div
+                className="aspect-video w-full"
+                style={{ background: item.gradient }}
+              />
+              <div className="absolute bottom-3 right-3">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="transition-colors hover:cursor-pointer"
+                  onClick={() => window.location.href = `/create?gradient=${encodeURIComponent(item.gradient)}`}
+                >
+                  Use this <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
               </div>
-            ))}
-          </div>
-          
-          {/* Duplicate set for infinite scroll effect */}
-          <div className="flex gap-4">
-            {items.map((item) => (
-              <div 
-                key={`${item.id}-dup`} 
-                className="relative overflow-hidden rounded-lg w-[300px] flex-shrink-0"
-              >
-                <div
-                  className="aspect-video w-full"
-                  style={{ background: item.gradient }}
-                />
-                <div className="absolute bottom-3 right-3">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="bg-white/80 hover:bg-white hover:scale-105 transition-transform hover:cursor-grab"
-                    onClick={() => window.location.href = `/create?gradient=${encodeURIComponent(item.gradient)}`}
-                  >
-                    Use this <ArrowRight className="ml-1 h-4 w-4 cursor-pointer" />
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

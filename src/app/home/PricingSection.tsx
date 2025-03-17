@@ -63,7 +63,7 @@ const PricingSection = () => {
                       <span>No attribution required</span>
                     </li>
                   </ul>
-                  <Button className="w-full hover:scale-105 transition-transform" asChild>
+                  <Button asChild>
                     <Link href="/create">Start creating <ArrowUpRight className="ml-1 h-4 w-4" /></Link>
                   </Button>
                 </div>
@@ -107,7 +107,7 @@ const PricingSection = () => {
                       <span>Virtual high-fives</span>
                     </li>
                   </ul>
-                  <Button variant="outline" className="w-full" disabled>
+                  <Button variant="outline" disabled>
                     Become Elite
                   </Button>
                 </div>
