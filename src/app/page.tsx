@@ -16,6 +16,7 @@ import PricingSection from '@/app/home/PricingSection';
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
   
+  // TODO: Remove hardcoded gradients here, add hardcoded gradients elsewhere
   const gradients = [
     {
       id: "gradient-1",
@@ -43,7 +44,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowButton(true);
-    }, 1000);
+    }, 1300);
     
     return () => clearTimeout(timer);
   }, []);
@@ -65,7 +66,7 @@ export default function Home() {
             animate={showButton ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Button asChild variant="outline" className="gap-2 hover:scale-105 transition-transform duration-300">
+            <Button asChild variant="outline" className="gap-2">
               <Link href="/create">Start creating <ArrowUpRight className="h-4 w-4" /></Link>
             </Button>
           </motion.div>

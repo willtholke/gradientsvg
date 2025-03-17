@@ -17,8 +17,6 @@ export interface GalleryProps {
 function GradientGallerySection({ items }: GalleryProps) {
   const carouselRef = useRef<HTMLDivElement>(null);
   
-
-  
   return (
     <section className="mt-6">
       <div className="container mb-8">
