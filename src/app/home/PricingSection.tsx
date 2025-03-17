@@ -72,7 +72,7 @@ const PricingSection = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="size-4" />
-                    <span>Ability to say "I'm ELITE"</span>
+                    <span>Ability to say &quot;I&apos;m ELITE&quot;</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="size-4" />

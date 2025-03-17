@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Paintbrush, Globe, Layout, Layers, Linkedin, User } from 'lucide-react';
+import { Paintbrush, Layout, Layers, Linkedin, User } from 'lucide-react';
 
 interface UseCaseProps {
   icon: React.ReactNode;

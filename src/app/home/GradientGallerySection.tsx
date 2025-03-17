@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,11 +16,8 @@ export interface GalleryProps {
 
 function GradientGallerySection({ items }: GalleryProps) {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
   
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+
   
   return (
     <section className="mt-6">
