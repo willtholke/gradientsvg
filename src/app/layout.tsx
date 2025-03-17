@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interTight.className} antialiased h-screen overflow-hidden`}
+        className={`${interTight.className} antialiased min-h-screen`}
       >
         {children}
       </body>
