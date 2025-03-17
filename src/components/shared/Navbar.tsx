@@ -2,10 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Palette, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isCreatePage = pathname === '/create';
+  
   return (
     <div className="w-full fixed top-0 left-0 z-50">
       <nav className="bg-white/70 backdrop-blur-[2px] h-16 w-full flex-shrink-0">
@@ -17,12 +21,14 @@ export default function Navbar() {
             </span>
           </Link>
           <div className="flex gap-8">
-            <Link href="/create">
-              <Button size="sm" variant="outline" className="hover:scale-105 transition-transform cursor-pointer py-1 bg-black text-white hover:bg-black/90 hover:text-white border-black hover:border-black/90">
-                <span className="hidden sm:inline-block">Create</span>
-                <ArrowUpRight className="h-4 w-4 sm:hidden" />
-              </Button>
-            </Link>
+            {!isCreatePage && (
+              <Link href="/create">
+                <Button size="sm" className="cursor-pointer transition-colors">
+                  <span className="hidden sm:inline-block">Create</span>
+                  <ArrowUpRight className="h-4 w-4 sm:hidden" />
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </nav>
