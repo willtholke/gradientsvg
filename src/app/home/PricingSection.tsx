@@ -12,7 +12,7 @@ import Tilt from 'react-parallax-tilt';
 const PricingSection = () => {
   return (
     <section className="mt-6 mb-8">
-      <div className="container">
+      <div className="mx-auto">
         <div className="flex flex-col gap-2 mb-8">
           <h2 className="heading-medium">Pricing</h2>
           <p className="subtext-muted">Simple and transparent.</p>
@@ -63,7 +63,7 @@ const PricingSection = () => {
                       <span>No attribution required</span>
                     </li>
                   </ul>
-                  <Button className="w-full cursor-pointer transition-colors cursor-pointer" asChild>
+                  <Button className="w-full hover:scale-105 transition-transform" asChild>
                     <Link href="/create">Start creating <ArrowUpRight className="ml-1 h-4 w-4" /></Link>
                   </Button>
                 </div>

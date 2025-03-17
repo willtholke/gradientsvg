@@ -60,9 +60,9 @@ const UseCasesSection = () => {
 
   return (
     <section className="mt-6">
-      <div className="container">
+      <div className="mx-auto">
         <div className="flex flex-col gap-2 mb-8">
-          <h2 className="heading-medium">
+          <h2 className="heading-medium text-gray-900">
             Use Cases
           </h2>
           <p className="subtext-muted">
