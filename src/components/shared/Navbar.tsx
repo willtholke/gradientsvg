@@ -18,7 +18,7 @@ export default function Navbar() {
           </Link>
           <div className="flex gap-8">
             <Link href="/create">
-              <Button size="sm" variant="outline" className="hover:scale-105 transition-transform cursor-grab py-1 bg-black text-white hover:bg-black/90 hover:text-white border-black hover:border-black/90">
+              <Button size="sm" variant="outline" className="hover:scale-105 transition-transform cursor-pointer py-1 bg-black text-white hover:bg-black/90 hover:text-white border-black hover:border-black/90">
                 <span className="hidden sm:inline-block">Create</span>
                 <ArrowUpRight className="h-4 w-4 sm:hidden" />
               </Button>
